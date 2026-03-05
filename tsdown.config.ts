@@ -6,14 +6,14 @@ export default defineConfig([{
   dts: true,
   format: ["esm", "cjs"],
   target: "es2020",
-  sourcemap: true,
+  sourcemap: true
 }, {
   entry: "./src/sdk.ts",
   outDir: "./dist",
   dts: true,
   format: ["esm", "cjs"],
   target: "es2020",
-  sourcemap: true,
+  sourcemap: true
 }, {
   entry: "./src/encoding/*",
   outDir: "./dist/encoding/",
