@@ -9,7 +9,9 @@ export default defineConfig([{
   format: ["esm", "cjs"],
   target: "es2020",
   sourcemap: true,
-  external: [tokenizerExternalRegex]
+  deps: {
+    neverBundle: [tokenizerExternalRegex]
+  }
 }, {
   entry: "./src/sdk.ts",
   outDir: "./dist",
@@ -17,7 +19,9 @@ export default defineConfig([{
   format: ["esm", "cjs"],
   target: "es2020",
   sourcemap: true,
-  external: [tokenizerExternalRegex]
+  deps: {
+    neverBundle: [tokenizerExternalRegex]
+  }
 }, {
   entry: "./src/encoding/*",
   outDir: "./dist/encoding/",

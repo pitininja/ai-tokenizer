@@ -1,6 +1,6 @@
 {
-  "name": "ai-tokenizer",
-  "version": "1.0.6",
+  "name": "@pitininja/ai-tokenizer",
+  "version": "1.1.0-beta.1",
   "author": {
     "name": "Kyle Carberry",
     "email": "kyle@coder.com",
@@ -8,16 +8,16 @@
   },
   "devDependencies": {
     "@types/bun": "latest",
-    "ai": "^5.0.105",
+    "ai": "^6.0.116",
     "base64-js": "^1.5.1",
-    "gpt-tokenizer": "^3.0.1",
+    "gpt-tokenizer": "^3.4.0",
     "mitata": "^1.0.34",
-    "prettier": "^3.6.2",
+    "prettier": "^3.8.1",
     "tiktoken": "^1.0.22",
-    "tsdown": "^0.15.6"
+    "tsdown": "^0.21.0"
   },
   "peerDependencies": {
-    "ai": "^5.0.0"
+    "ai": "^6.0.0"
   },
   "peerDependenciesMeta": {
     "ai": {
@@ -25,24 +25,24 @@
     }
   },
   "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
   "typesVersions": {
     "*": {
-      "tokenizer": ["./dist/tokenizer.d.ts"],
-      "sdk": ["./dist/sdk.d.ts"],
-      "encoding": ["./dist/encoding/index.d.ts"],
-      "encoding/cl100k_base": ["./dist/encoding/cl100k_base.d.ts"],
-      "encoding/o200k_base": ["./dist/encoding/o200k_base.d.ts"],
-      "encoding/p50k_base": ["./dist/encoding/p50k_base.d.ts"],
-      "encoding/claude": ["./dist/encoding/claude.d.ts"]
+      "tokenizer": ["./dist/tokenizer.d.mts"],
+      "sdk": ["./dist/sdk.d.mts"],
+      "encoding": ["./dist/encoding/index.d.mts"],
+      "encoding/cl100k_base": ["./dist/encoding/cl100k_base.d.mts"],
+      "encoding/o200k_base": ["./dist/encoding/o200k_base.d.mts"],
+      "encoding/p50k_base": ["./dist/encoding/p50k_base.d.mts"],
+      "encoding/claude": ["./dist/encoding/claude.d.mts"]
     }
   },
   "exports": {
     ".": {
       "import": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/index.js"
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
       },
       "require": {
         "types": "./dist/index.d.cts",
@@ -51,8 +51,8 @@
     },
     "./tokenizer": {
       "import": {
-        "types": "./dist/tokenizer.d.ts",
-        "default": "./dist/tokenizer.js"
+        "types": "./dist/tokenizer.d.mts",
+        "default": "./dist/tokenizer.mjs"
       },
       "require": {
         "types": "./dist/tokenizer.d.cts",
@@ -61,8 +61,8 @@
     },
     "./sdk": {
       "import": {
-        "types": "./dist/sdk.d.ts",
-        "default": "./dist/sdk.js"
+        "types": "./dist/sdk.d.mts",
+        "default": "./dist/sdk.mjs"
       },
       "require": {
         "types": "./dist/sdk.d.cts",
@@ -71,8 +71,8 @@
     },
     "./encoding": {
       "import": {
-        "types": "./dist/encoding/index.d.ts",
-        "default": "./dist/encoding/index.js"
+        "types": "./dist/encoding/index.d.mts",
+        "default": "./dist/encoding/index.mjs"
       },
       "require": {
         "types": "./dist/encoding/index.d.cts",
@@ -81,8 +81,8 @@
     },
     "./encoding/cl100k_base": {
       "import": {
-        "types": "./dist/encoding/cl100k_base.d.ts",
-        "default": "./dist/encoding/cl100k_base.js"
+        "types": "./dist/encoding/cl100k_base.d.mts",
+        "default": "./dist/encoding/cl100k_base.mjs"
       },
       "require": {
         "types": "./dist/encoding/cl100k_base.d.cts",
@@ -91,8 +91,8 @@
     },
     "./encoding/o200k_base": {
       "import": {
-        "types": "./dist/encoding/o200k_base.d.ts",
-        "default": "./dist/encoding/o200k_base.js"
+        "types": "./dist/encoding/o200k_base.d.mts",
+        "default": "./dist/encoding/o200k_base.mjs"
       },
       "require": {
         "types": "./dist/encoding/o200k_base.d.cts",
@@ -101,8 +101,8 @@
     },
     "./encoding/p50k_base": {
       "import": {
-        "types": "./dist/encoding/p50k_base.d.ts",
-        "default": "./dist/encoding/p50k_base.js"
+        "types": "./dist/encoding/p50k_base.d.mts",
+        "default": "./dist/encoding/p50k_base.mjs"
       },
       "require": {
         "types": "./dist/encoding/p50k_base.d.cts",
@@ -111,8 +111,8 @@
     },
     "./encoding/claude": {
       "import": {
-        "types": "./dist/encoding/claude.d.ts",
-        "default": "./dist/encoding/claude.js"
+        "types": "./dist/encoding/claude.d.mts",
+        "default": "./dist/encoding/claude.mjs"
       },
       "require": {
         "types": "./dist/encoding/claude.d.cts",
