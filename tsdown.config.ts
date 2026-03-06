@@ -1,6 +1,16 @@
-import { defineConfig } from "tsdown";
+import { defineConfig, type UserConfig } from "tsdown";
 
-const tokenizerExternalRegex = /\/tokenizer(\.ts)?$/;
+const commonConfig: UserConfig = {
+  deps: {
+    neverBundle: [/\/tokenizer(\.ts)?$/]
+  },
+  outExtensions: (info) => {
+    if (info.format === "cjs") {
+      return { js: ".cjs" };
+    }
+    return { js: ".js" };
+  }
+}
 
 export default defineConfig([{
   entry: "./src/index.ts",
@@ -9,9 +19,7 @@ export default defineConfig([{
   format: ["esm", "cjs"],
   target: "es2020",
   sourcemap: true,
-  deps: {
-    neverBundle: [tokenizerExternalRegex]
-  }
+  ...commonConfig
 }, {
   entry: "./src/sdk.ts",
   outDir: "./dist",
@@ -19,9 +27,7 @@ export default defineConfig([{
   format: ["esm", "cjs"],
   target: "es2020",
   sourcemap: true,
-  deps: {
-    neverBundle: [tokenizerExternalRegex]
-  }
+  ...commonConfig
 }, {
   entry: "./src/encoding/*",
   outDir: "./dist/encoding/",
@@ -30,6 +36,7 @@ export default defineConfig([{
   dts: true,
   sourcemap: false,
   minify: false,
+  ...commonConfig
 }, {
   entry: "./src/tokenizer.ts",
   outDir: "./dist",
@@ -37,4 +44,5 @@ export default defineConfig([{
   format: ["esm", "cjs"],
   target: "es2020",
   sourcemap: true,
+  ...commonConfig
 }]);
