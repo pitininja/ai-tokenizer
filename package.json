@@ -1,6 +1,6 @@
 {
   "name": "@pitininja/ai-tokenizer",
-  "version": "1.1.0-beta.3",
+  "version": "1.1.0",
   "author": {
     "name": "Kyle Carberry",
     "email": "kyle@coder.com",
@@ -8,13 +8,13 @@
   },
   "devDependencies": {
     "@types/bun": "latest",
-    "ai": "^6.0.116",
+    "ai": "^6.0.180",
     "base64-js": "^1.5.1",
     "gpt-tokenizer": "^3.4.0",
     "mitata": "^1.0.34",
-    "prettier": "^3.8.1",
+    "prettier": "^3.8.3",
     "tiktoken": "^1.0.22",
-    "tsdown": "^0.21.0"
+    "tsdown": "^0.22.0"
   },
   "peerDependencies": {
     "ai": "^6.0.0"
