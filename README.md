@@ -1,8 +1,6 @@
 # ai-tokenizer
 
-[![CI](https://github.com/coder/ai-tokenizer/actions/workflows/ci.yml/badge.svg)](https://github.com/coder/ai-tokenizer/actions/workflows/ci.yml)
-[![npm version](https://img.shields.io/npm/v/ai-tokenizer)](https://www.npmjs.com/package/ai-tokenizer)
-[![npm downloads](https://img.shields.io/npm/dm/ai-tokenizer)](https://www.npmjs.com/package/ai-tokenizer)
+[![npm version](https://badge.fury.io/js/@pitininja%2Fai-tokenizer.svg)](https://badge.fury.io/js/@pitininja%2Fai-tokenizer)
 
 A faster than tiktoken tokenizer with first-class support for Vercel's AI SDK.
 
