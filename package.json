@@ -131,7 +131,7 @@
     "access": "public"
   },
   "scripts": {
-    "build": "tsdown",
+    "build": "NODE_OPTIONS=\"--max-old-space-size=8192\" tsdown",
     "bench": "bun run bench/*",
     "format": "prettier --cache --write \"src/**/*.{ts,tsx,json}\"",
     "typecheck": "tsc --noEmit"
